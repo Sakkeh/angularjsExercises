@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="taxdata">
+	<head>
+		<meta charset="utf-8">
+		<title>Tax Data App</title>	
+		
+		<!-- Angular libs -->
+		<script src="js/ext/angular.min.js"></script>
+		<script src="js/int/app.js"></script>			
+	</head>
+	<body ng-controller="MainController">
+		<table border="1">
+			<thead>
+				<th>Date</th>
+				<th>Name</th>
+				<th>Received</th>	
+			</thead>
+		    <tr ng-repeat="query in queries">
+		      <td>{{query.hakupvm}}</td>
+		      <td>{{query.received}}</td>
+		      <td>{{query.snippet}}</td>		      
+		    </tr>			
+		</table>		
+	</body>
+</html>
