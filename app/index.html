@@ -9,14 +9,16 @@
 		<script src="js/int/app.js"></script>			
 	</head>
 	<body ng-controller="MainController">
+		<h1>{{appName}}</h1>
+		
 		<table border="1">
 			<thead>
 				<th>Date</th>
-				<th>Name</th>
-				<th>Received</th>	
+				<th>Received</th>
+				<th>Name</th>	
 			</thead>
 		    <tr ng-repeat="query in queries">
-		      <td>{{query.hakupvm}}</td>
+		      <td>{{query.querydate}}</td>
 		      <td>{{query.received}}</td>
 		      <td>{{query.snippet}}</td>		      
 		    </tr>			
