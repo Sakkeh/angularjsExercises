@@ -2,26 +2,45 @@
 <html lang="en" ng-app="taxdata">
 	<head>
 		<meta charset="utf-8">
-		<title>Tax Data App</title>	
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<!-- Angular libs -->
-		<script src="js/ext/angular.min.js"></script>
-		<script src="js/int/app.js"></script>			
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <title>Tax Data App</title>	
+			
+	    <!-- Bootstrap core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom styles for this template -->
+	    <link href="css/starter-template.css" rel="stylesheet">		
+			
 	</head>
 	<body ng-controller="MainController">
-		<h1>{{appName}}</h1>
+		<div class="container">
+			<h1>{{appName}}</h1>
+			
+			<table border="1">
+				<thead>
+					<th>Date</th>
+					<th>Received</th>
+					<th>Name</th>	
+				</thead>
+			    <tr ng-repeat="query in queries">
+			      <td>{{query.querydate}}</td>
+			      <td>{{query.received}}</td>
+			      <td>{{query.snippet}}</td>		      
+			    </tr>			
+			</table>	
+		</div><!-- /.container -->
 		
-		<table border="1">
-			<thead>
-				<th>Date</th>
-				<th>Received</th>
-				<th>Name</th>	
-			</thead>
-		    <tr ng-repeat="query in queries">
-		      <td>{{query.querydate}}</td>
-		      <td>{{query.received}}</td>
-		      <td>{{query.snippet}}</td>		      
-		    </tr>			
-		</table>		
+		<!-- JavaScript placed at the end of the document so the pages load faster -->
+		<!-- Bootstrap --> 
+		<script src="js/ext/bootstrap.min.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!-- Angular -->
+		<script src="js/ext/angular.min.js"></script>
+		<!-- Application -->		
+		<script src="js/int/app.js"></script>
 	</body>
 </html>
