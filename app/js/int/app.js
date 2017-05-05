@@ -1,5 +1,5 @@
 // Define the taxdata module
-var taxdata = angular.module('taxdata', []);
+var taxdata = angular.module('taxdata', ['ngRoute']);
 
 // Define the `MainController` controller on the `taxdata` module
 taxdata.controller('MainController', function MainController($scope) {
@@ -25,3 +25,19 @@ taxdata.controller('MainController', function MainController($scope) {
   $scope.appName = "TaxData Application";
   
 });
+
+taxdata.config(function config($routeProvider) {
+      
+	$routeProvider
+	.when('/', {
+		template: 'Welcome user!'
+	})
+	.when('/taxdata', {
+		template: 'Taxdata page!!!'
+	})
+	.otherwise({
+		/*template: 'Ohterwise'*/
+		redirectTo: '/'
+	});    
+});
+
