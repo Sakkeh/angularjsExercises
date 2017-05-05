@@ -26,6 +26,24 @@ taxdata.controller('MainController', function MainController($scope) {
   
 });
 
+// Use templateUrl to use external template
+// ngRoute doesn't allow multiple views -> ui-router does
+taxdata.config(function config($routeProvider) {
+      
+	$routeProvider
+	.when('/', {
+		templateUrl: 'main.html'
+	})
+	.when('/taxdata', {		
+		templateUrl: 'taxdata.html'
+	})
+	.otherwise({
+		/*template: 'Otherwise'*/
+		redirectTo: '/'
+	});    
+});
+
+/* Basic template without external template file
 taxdata.config(function config($routeProvider) {
       
 	$routeProvider
@@ -36,8 +54,7 @@ taxdata.config(function config($routeProvider) {
 		template: 'Taxdata page!!!'
 	})
 	.otherwise({
-		/*template: 'Ohterwise'*/
 		redirectTo: '/'
 	});    
-});
+}); */
 
