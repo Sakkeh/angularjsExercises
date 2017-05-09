@@ -26,6 +26,10 @@ taxdata.controller('MainController', function MainController($scope) {
   
 });
 
+taxdata.factory('UserService', ['Restangular', function(Restangular){
+	
+}]);
+
 // Use templateUrl to use external template
 // ngRoute doesn't allow multiple views -> ui-router does
 taxdata.config(function config($routeProvider) {
