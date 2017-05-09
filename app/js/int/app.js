@@ -1,5 +1,5 @@
 // Define the taxdata module
-var taxdata = angular.module('taxdata', ['ngRoute']);
+var taxdata = angular.module('taxdata', ['ngRoute', 'restangular']);
 
 // Define the `MainController` controller on the `taxdata` module
 taxdata.controller('MainController', function MainController($scope) {
